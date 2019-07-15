@@ -8,7 +8,7 @@ bot.on('ready',()=>{
 
 bot.on('message',msg=>{
   if(msg.content === "Hello"){
-		msg.reply("Hello Brother!");
+		msg.reply("Hello!");
 	}
 });
 
