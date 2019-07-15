@@ -9,9 +9,9 @@ bot.on('ready',()=>{
 
 bot.on('message',msg=>{
 	if(msg.content === "Hello"){
-		msg.reply("Hello!");
+		msg.reply("Hello0000000!");
 	}
-	setTimeout(msg.reply("1"),20000);
+	//setTimeout(msg.reply("1"),20000);
 });
 
 bot.login(process.env.BOT_TOKEN);
