@@ -12,12 +12,13 @@ client.on('ready',()=>{
 					data += chunk;
 				});
 				res.on('end', function () {
-					var generalChannel = client.channels.get("579297644178833424")
+					//var generalChannel = client.channels.get("579297644178833424") //QD
+					var generalChannel = client.channels.get("600017052366929921")
 					//generalChannel.send(data)
 					var dArr = JSON.parse(data);
 					for(i=0;i<dArr.length;i++)
 					{
-						if(dArr[i]['size']>=1000000)
+						if(dArr[i]['size']>=1000)
 						{
 							generalChannel.send(:pampeet: + " [" + dArr[i]['timestamp'] +"] BitMEX "+ dArr[i]['symbol'] +" **"+ dArr[i]['size'] +"** contracts market bought at **" + dArr[i]['price'] + "**")
 						}
