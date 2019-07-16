@@ -37,7 +37,7 @@ client.on('ready',()=>{
 							c++
 						}
 					}
-					if(sz>=2000000)
+					if(sz>=1000000)
 					{
 						console.log(x/c);
 						console.log(sz);
