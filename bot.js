@@ -19,7 +19,7 @@ client.on('ready',()=>{
 					{
 						if(dArr[i]['size']>=1000000)
 						{
-							generalChannel.send(":pampeet:" + "[" + dArr[i]['timestamp'] +"] BitMEX "+ dArr[i]['symbol'] +" **"+ dArr[i]['size'] +"** contracts market sold at **" + dArr[i]['price'] + "**")
+							generalChannel.send(":pampeet: " + "[" + dArr[i]['timestamp'] +"] BitMEX "+ dArr[i]['symbol'] +" **"+ dArr[i]['size'] +"** contracts market sold at **" + dArr[i]['price'] + "**")
 						}
 					}
 				});
