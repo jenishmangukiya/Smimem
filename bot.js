@@ -37,6 +37,8 @@ client.on('ready',()=>{
 							c++
 						}
 					}
+					console.log(x/c);
+					console.log(sz);
 					if(sz>=1000000)
 					{
 						console.log(x/c);
