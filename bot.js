@@ -37,13 +37,10 @@ client.on('ready',()=>{
 							c++
 						}
 					}
-					console.log(x/c);
-					console.log(sz);
 					if(sz>=1000000)
 					{
 						console.log(x/c);
 						console.log(sz);
-						
 						generalChannel.send(" :flag_in: " + " [" + dArr[i]['timestamp'] +"] BitMEX XBTUSD **"+ sz +"** contracts market bought at **" + x/c + "**")
 						
 					}
