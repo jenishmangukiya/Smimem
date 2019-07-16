@@ -41,7 +41,7 @@ client.on('ready',()=>{
 					{
 						console.log(x/c);
 						console.log(sz);
-						generalChannel.send(" :flag_in: " + " BitMEX XBTUSD **"+ sz +"** contracts market bought at **" + x/c + "**")
+						generalChannel.send(" :pampeet: " + " BitMEX XBTUSD **"+ sz +"** contracts market bought at **" + x/c + "**")
 						
 					}
 				});
