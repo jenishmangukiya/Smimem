@@ -1,37 +1,40 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
-const https = require('https');
+const Discord = require('discord.js')
+const client = new Discord.Client()
+const https = require('https')
 
-bot.on('ready',()=>{
-	console.log("Working & Online");
-	var data='';
+client.on('ready',()=>{
+	console.log("Working & Online")
 	setInterval(function() {
+			var data='';
     		var options = 'https://www.bitmex.com/api/v1/trade?symbol=XBTUSD&side=buy&count=500&start=0&reverse=true';
     		var request = https.request(options, function (res) {
-			res.on('data', function (chunk) {
-				data += chunk;
-			});
-			res.on('end', function () {
-				bot.on('message',msg=>{
-					const channel = 'general';
-					if (!channel) return;
-					 // Send the message, mentioning the member
-					 channel.send(data);
+				res.on('data', function (chunk) {
+					data += chunk;
 				});
-				console.log(data);
-			});
+				res.on('end', function () {
+					var generalChannel = client.channels.get("600017052366929921")
+					//generalChannel.send(data)
+					var dArr = JSON.parse(data);
+					for(i=0;i<dArr.length;i++)
+					{
+						if(dArr[i]['size']>=1000000)
+						{
+							generalChannel.send(":pampeet:" + "[" + dArr[i]['timestamp'] +"] BitMEX "+ dArr[i]['symbol'] +" **"+ dArr[i]['size'] +"** contracts market sold at **" + dArr[i]['price'] + "**")
+						}
+					}
+				});
     		});
     		request.on('error', function (e) {
-        		console.log(e.message);
+        		console.log(e.message)
     		});
-    		request.end();     
-  	},30000);
+    		request.end()  
+  	},5000);
 });
 
-bot.on('message',msg=>{
+client.on('message',msg=>{
 	if(msg.content === "Hello"){
-		msg.reply("Hello0000000!");
+		msg.reply("Hello0000000!")
 	}
 });
 
-bot.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN)
