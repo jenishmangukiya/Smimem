@@ -37,13 +37,13 @@ client.on('ready',()=>{
 							c++
 						}
 					}
-					/*if(sz>=1000000)
-					{*/
+					if(sz>=1000000)
+					{
 						console.log(x/c);
 						console.log(sz);
-						generalChannel.send(" :flag_in: " + " **in last two seconds** BitMEX XBTUSD **"+ sz +"** contracts market bought at **" + x/c + "**")
+						generalChannel.send(" :flag_in: " + " BitMEX XBTUSD **"+ sz +"** contracts market bought at **" + x/c + "**")
 						
-					/*}*/
+					}
 				});
     		});
     		request.on('error', function (e) {
