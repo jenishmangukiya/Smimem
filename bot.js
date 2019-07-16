@@ -21,8 +21,8 @@ client.on('ready',()=>{
 					data += chunk;
 				});
 				res.on('end', function () {
-					//var generalChannel = client.channels.get("579297644178833424") //QD
-					var generalChannel = client.channels.get("600017052366929921")
+					var generalChannel = client.channels.get("579297644178833424") //QD
+					//var generalChannel = client.channels.get("600017052366929921")
 					
 					var dArr = JSON.parse(data);
 					var x=0;
