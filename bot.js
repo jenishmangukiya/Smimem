@@ -21,7 +21,7 @@ client.on('ready',()=>{
 					data += chunk;
 				});
 				res.on('end', function () {
-					var generalChannel = client.channels.get("579297644178833424") //QD
+					var generalChannel = client.channels.get("600878121301966898") //QD
 					//var generalChannel = client.channels.get("600017052366929921")
 					
 					var dArr = JSON.parse(data);
@@ -54,9 +54,9 @@ client.on('ready',()=>{
 });
 
 client.on('message',msg=>{
-	if(msg.content === "Hello"){
+	/*if(msg.content === "Hello"){
 		msg.reply("Hello0000000!")
-	}
+	}*/
 });
 
 client.login(process.env.BOT_TOKEN)
