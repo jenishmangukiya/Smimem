@@ -30,6 +30,7 @@ client.on('ready',()=>{
 					for(i=0;i<dArr.length;i++)
 					{
 						console.log(dArr[i]['price']);
+						console.log(c);
 						if(dArr[i]['side']=='Buy' && (dArr[i]['price']>=10000))
 						{
 							x+=dArr[i]['price']
