@@ -29,17 +29,13 @@ client.on('ready',()=>{
 					var c=0;
 					for(i=0;i<dArr.length;i++)
 					{
-						console.log(dArr[i]['price']);
-						console.log(c);
-						if(dArr[i]['side']=='Buy' && (dArr[i]['price']>=10000))
+						if(dArr[i]['side']=='Buy')
 						{
 							x+=dArr[i]['price']
 							sz+=dArr[i]['size']
 							c++
 						}
 					}
-					//console.log(x/c);
-					//console.log(sz);
 					if(sz>=1000000)
 					{
 						console.log(x/c);
