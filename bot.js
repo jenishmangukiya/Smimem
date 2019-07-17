@@ -24,6 +24,7 @@ client.on('ready',()=>{
 					var generalChannel = client.channels.get("600878121301966898") //QD
 					//var generalChannel = client.channels.get("600017052366929921")
 					console.log(generalChannel);
+					generalChannel.send('Hello World!!');
 					var dArr = JSON.parse(data);
 					var x=0;
 					var sz=0;
@@ -50,7 +51,7 @@ client.on('ready',()=>{
         		console.log(e.message)
     		});
     		request.end()  
-  	},2000);
+  	},10000);
 });
 
 client.on('message',msg=>{
