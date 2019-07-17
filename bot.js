@@ -23,9 +23,8 @@ client.on('ready',()=>{
 				res.on('end', function () {
 					var generalChannel = client.channels.get("600878121301966898") //QD
 					//var generalChannel = client.channels.get("600017052366929921")
-					console.log(generalChannel);
-					//generalChannel.send('Hello World!!');
 					var dArr = JSON.parse(data);
+					console.log(dArr);
 					var x=0;
 					var sz=0;
 					var c=0;
@@ -38,8 +37,6 @@ client.on('ready',()=>{
 							c++
 						}
 					}
-					console.log(x/c);
-					console.log(sz);
 					if(sz>=1000000)
 					{
 						console.log(x/c);
