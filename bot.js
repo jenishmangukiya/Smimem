@@ -40,7 +40,7 @@ client.on('ready',()=>{
 					{
 						console.log(x/c);
 						console.log(sz);
-						generalChannel.send(" :pampeet: " + " BitMEX XBTUSD **"+ sz +"** contracts market bought at **" + x/c + "**")
+						generalChannel.send(" BitMEX XBTUSD **"+ sz.toLocaleString() +"** contracts market bought at **" + Math.round(x/c) + "**")
 						
 					}
 				});
